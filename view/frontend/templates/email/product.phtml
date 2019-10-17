@@ -1,0 +1,9 @@
+<?php 
+    $reports = $block->getReport(); 
+    $supemail = $reports->debug(); 
+    foreach ($supemail as $value) 
+    {
+        if($value['ordercount']!=0)
+        echo '<tr><td>'.$value['productid'].'</td><td>'.$value['productname'].'</td><td>'.$value['ordercount'].'</td><td>'.$value['now-available'].'</td></tr>';
+    } 
+?>

@@ -1,0 +1,62 @@
+<!--@subject {{trans "LPO from SOUQERZ"}} @-->
+
+<div style="width: 650px;" align="center">
+    <img src="https://souqerz.com/raw/images/supplier-head.jpg" style="width: 100%;" />
+    <table width="100%" style="background: #eeeeee;font-size: 11px;">
+        <tr>
+            <td width="50%" style="padding: 20px;" valign="top">
+                <i>From</i><br />
+                <b>Euro Premier General Trading LLC</b><br />P.O. Box 95318,<br />Dubai, United Arab Emirates<br />T: +971 4250 8070, +971 4250 8077<br /><a href="mailto:info@eps-ae.com">info@eps-ae.com</a> | <a href="https://www.souqerz.com">www.souqerz.com</a>    
+            </td>
+            <td width="50%" style="padding: 20px;" valign="top">
+                <i>To</i><br />
+                <b>{{var supplier_name}}</b><br />
+                {{var supplier_address}}<br />
+                T: {{var supplier_phone}} | E: <a href="mailto:{{var supplier_mail}}">{{var supplier_mail}}</a>
+            </td>
+        </tr>
+    </table>
+</div>
+<table class="email-items" id="suppliers-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Required Quanity</th>
+            <th>Current Stock</th>
+        </tr>
+    </thead>
+    <tbody>
+        
+        {{layout handle="supplier_report_template" report=$report area="frontend"}}
+            
+    </tbody>
+       
+</table>
+
+<style>
+#suppliers-table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 650px;
+}
+
+#suppliers-table td, #suppliers-table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  font-size: 11px;
+}
+
+#suppliers-table tr:nth-child(even){background-color: #f2f2f2;}
+
+#suppliers-table tr:hover {background-color: #ddd;}
+
+#suppliers-table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-size: 11px;
+  text-align: left;
+  background-color: #006aff;
+  color: white;
+}
+</style>

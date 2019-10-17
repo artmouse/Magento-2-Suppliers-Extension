@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../Magento/Backend/etc/menu.xsd">
+   <menu>
+        <add id="Informatics_Suppliers::view" title="Suppliers" module="Informatics_Suppliers" sortOrder="11" resource="Informatics_Suppliers::view"/>
+
+        <add id="Informatics_Suppliers::grid" title="Manage Suppliers" module="Informatics_Suppliers" sortOrder="10" parent="Informatics_Suppliers::view" action="suppliers/grid/index" resource="Informatics_Suppliers::view"/>
+</menu>
+</config>
